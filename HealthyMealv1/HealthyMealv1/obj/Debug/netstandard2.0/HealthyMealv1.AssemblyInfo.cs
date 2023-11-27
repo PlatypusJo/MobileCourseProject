@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HealthyMealv1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d738fe15458d02c9df8d2666e67fe02721be9830")]
 [assembly: System.Reflection.AssemblyProductAttribute("HealthyMealv1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HealthyMealv1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

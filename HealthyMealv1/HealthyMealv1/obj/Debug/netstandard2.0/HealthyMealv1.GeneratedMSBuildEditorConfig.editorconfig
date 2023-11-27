@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = HealthyMealv1
-build_property.ProjectDir = D:\MobileCourseProject\HealthyMealv1\HealthyMealv1\
+build_property.ProjectDir = D:\University\MobileCourseProject\HealthyMealv1\HealthyMealv1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

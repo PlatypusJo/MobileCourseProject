@@ -3408,24 +3408,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Muki5hima\\.nuget\\packages\\": {},
+    "D:\\Programs\\VisualStudio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1.Android\\HealthyMealv1.Android.csproj",
+      "projectUniqueName": "D:\\University\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1.Android\\HealthyMealv1.Android.csproj",
       "projectName": "HealthyMealv1.Android",
-      "projectPath": "D:\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1.Android\\HealthyMealv1.Android.csproj",
-      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1.Android\\obj\\",
+      "projectPath": "D:\\University\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1.Android\\HealthyMealv1.Android.csproj",
+      "packagesPath": "C:\\Users\\Muki5hima\\.nuget\\packages\\",
+      "outputPath": "D:\\University\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Programs\\VisualStudio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Muki5hima\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3439,8 +3439,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "D:\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1\\HealthyMealv1.csproj": {
-              "projectPath": "D:\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1\\HealthyMealv1.csproj"
+            "D:\\University\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1\\HealthyMealv1.csproj": {
+              "projectPath": "D:\\University\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1\\HealthyMealv1.csproj"
             }
           }
         }

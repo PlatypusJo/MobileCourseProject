@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "jBRdu39GvTMwvjckHx73CZwvj2rR6Yd3++dbjfWOmH2vOv0bF4OKgwa9jgszJB6n6t5ytp/L5sOMHEwaNEP0fg==",
+  "dgSpecHash": "pvNxYAjq26dpvaR544IK3IzmEi1m0G6mjMAMmYrveoVoedjusddncauB90oAu/O8hemmpMu2lh6hT/Xf3fltNA==",
   "success": true,
-  "projectFilePath": "D:\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1\\HealthyMealv1.csproj",
+  "projectFilePath": "D:\\University\\MobileCourseProject\\HealthyMealv1\\HealthyMealv1\\HealthyMealv1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\lenovo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\lenovo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\lenovo\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\lenovo\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Muki5hima\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Muki5hima\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Muki5hima\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Muki5hima\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Muki5hima\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }
