@@ -1,86 +1,90 @@
-﻿using HealthyMealv1.DTOs;
+﻿using HealthyMealv1.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace HealthyMealv1.ViewModels
 {
     public class ProductsListsPageViewModel : BaseViewModel
     {
+        private readonly int _pageSize = 5;
+
         private int _pageIndex = 1;
         public int PageIndex
         { 
             get => _pageIndex;
-            set { _pageIndex = value; }
+            set 
+            { 
+                _pageIndex = value; 
+                NotifyPropertyChanged(nameof(PageIndex));
+            }
         }
+
+        private List<ProductToBuyModel> _productsToBuy;
 
         public ObservableCollection<ProductToBuyModel> ProductsToBuy { get; set; }
 
+        public ICommand NextPageCommand { get; private set; }
+        public ICommand BackPageCommand { get; private set; }
+
         public ProductsListsPageViewModel()
         {
+            NextPageCommand = new Command(NextPage);
+            BackPageCommand = new Command(BackPage);
             LoadProducts();
+        }
+
+        public void NextPage()
+        {
+            SwitchPageAndReloadData(_pageIndex + 1);
+        }
+
+        public void BackPage()
+        {
+            SwitchPageAndReloadData(_pageIndex - 1);
+        }
+
+        private void SwitchPageAndReloadData(int pageNumber)
+        {
+            int index = pageNumber - 1;
+            if (index < 0 || index > _productsToBuy.Count / _pageSize)
+                return;
+
+            ProductsToBuy.Clear();
+            int startIndex = index * _pageSize;
+            for (int i = startIndex; i < _productsToBuy.Count && i < startIndex + _pageSize; i++)
+            {
+                ProductsToBuy.Add(_productsToBuy[i]);
+            }
+            PageIndex = pageNumber;
         }
 
         private void LoadProducts()
         {
-            ProductsToBuy = new ObservableCollection<ProductToBuyModel>()
+            int count = 13;
+            _productsToBuy = new List<ProductToBuyModel>();
+
+            for (int i = 0; i < count; i++)
             {
-                new ProductToBuyModel()
+                _productsToBuy.Add(new ProductToBuyModel()
                 {
-                    Id = 1,
-                    ProductId = 1,
-                    UnitsId = 1,
-                    UnitsName = "г",
-                    Name = "Сыр",
+                    Id = i,
+                    ProductId = i,
+                    UnitsId = i,
+                    UnitsName = "у.е.",
+                    Name = "Test" + i.ToString(),
                     Amount = 100,
-                },
-                new ProductToBuyModel()
-                {
-                    Id = 2,
-                    ProductId = 2,
-                    UnitsId = 2,
-                    UnitsName = "мл",
-                    Name = "Молоко",
-                    Amount = 980,
-                },
-                new ProductToBuyModel()
-                {
-                    Id = 3,
-                    ProductId = 3,
-                    UnitsId = 3,
-                    UnitsName = "г",
-                    Name = "Колбаса",
-                    Amount = 200,
-                },
-                new ProductToBuyModel()
-                {
-                    Id = 4,
-                    ProductId = 4,
-                    UnitsId = 4,
-                    UnitsName = "г",
-                    Name = "Фарш свиной",
-                    Amount = 450,
-                },
-                new ProductToBuyModel()
-                {
-                    Id = 4,
-                    ProductId = 4,
-                    UnitsId = 4,
-                    UnitsName = "у.е.",
-                    Name = "Test1",
-                    Amount = 450,
-                },
-                new ProductToBuyModel()
-                {
-                    Id = 4,
-                    ProductId = 4,
-                    UnitsId = 4,
-                    UnitsName = "у.е.",
-                    Name = "Test2",
-                    Amount = 450,
-                }
-            };
+                });
+            }
+
+            ProductsToBuy = new ObservableCollection<ProductToBuyModel>();
+            for (int i = 0; i < _productsToBuy.Count && i < 5; i++)
+            {
+                ProductsToBuy.Add(_productsToBuy[i]);
+            }
         }
     }
 }

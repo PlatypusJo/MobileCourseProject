@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HealthyMealv1.DTOs
+namespace HealthyMealv1.Models
 {
     public class FoodModel
     {
-        public int Id {  get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
         public int? UserId { get; set; }

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealthyMealv1.Views.ProductsListsPage"  
-             xmlns:model="clr-namespace:HealthyMealv1.DTOs"
+             xmlns:model="clr-namespace:HealthyMealv1.Models"
              xmlns:vm="clr-namespace:HealthyMealv1.ViewModels"
              Title="Списки"
              IconImageSource="iconLists.png">
@@ -91,7 +91,8 @@
                             <Button WidthRequest="50"
                                     VerticalOptions="Start"
                                     BackgroundColor="#1C7C54"
-                                    ImageSource="iconBackBtn.png"/>
+                                    ImageSource="iconBackBtn.png"
+                                    Command="{Binding BackPageCommand}"/>
                             <Label Text="{Binding PageIndex}"
                                    HorizontalOptions="CenterAndExpand"
                                    VerticalOptions="Center"
@@ -100,7 +101,8 @@
                             <Button WidthRequest="50"
                                     HorizontalOptions="End"
                                     BackgroundColor="#1C7C54"
-                                    ImageSource="iconForwardBtn.png"/>
+                                    ImageSource="iconForwardBtn.png"
+                                    Command="{Binding NextPageCommand}"/>
                         </StackLayout>
                         <StackLayout x:Name="Buttons"
                              Padding="10" 

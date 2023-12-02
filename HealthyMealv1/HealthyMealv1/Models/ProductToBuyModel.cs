@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HealthyMealv1.DTOs
+namespace HealthyMealv1.Models
 {
     public class ProductToBuyModel
     {
@@ -12,8 +12,8 @@ namespace HealthyMealv1.DTOs
         public string UnitsName { get; set; }
         public string Name { get; set; }
         public string Brand { get; set; }
-        public double Amount { get; set;}
-        public DateTime Date {  get; set; }
+        public double Amount { get; set; }
+        public DateTime Date { get; set; }
         public bool IsBuy { get; set; }
 
     }

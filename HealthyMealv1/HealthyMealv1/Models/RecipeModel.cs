@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace HealthyMealv1.DTOs
+namespace HealthyMealv1.Models
 {
     public class RecipeModel
     {
