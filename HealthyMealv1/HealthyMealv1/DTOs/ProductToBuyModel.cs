@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HealthyMealv1.DTOs
 {
-    public class ProductToBuyDTO
+    public class ProductToBuyModel
     {
         public int Id { get; set; }
         public int ProductId { get; set; }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HealthyMealv1.DTOs
 {
-    public class StepDTO
+    public class IngredientModel
     {
-        public StepDTO() { }
+        public IngredientModel() { }
     }
 }

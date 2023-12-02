@@ -42,3 +42,4 @@ D:\University\MobileCourseProject\HealthyMealv1\HealthyMealv1\obj\Debug\netstand
 D:\University\MobileCourseProject\HealthyMealv1\HealthyMealv1\obj\Debug\netstandard2.0\refint\HealthyMealv1.dll
 D:\University\MobileCourseProject\HealthyMealv1\HealthyMealv1\obj\Debug\netstandard2.0\HealthyMealv1.pdb
 D:\University\MobileCourseProject\HealthyMealv1\HealthyMealv1\obj\Debug\netstandard2.0\Views\FoodPage.xaml.g.cs
+D:\University\MobileCourseProject\HealthyMealv1\HealthyMealv1\obj\Debug\netstandard2.0\HealthyMealv1.sourcelink.json

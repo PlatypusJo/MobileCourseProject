@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HealthyMealv1.DTOs
 {
-    public class NutritionalValueDTO
+    public class NutritionalValueModel
     {
-        public NutritionalValueDTO() { }
+        public NutritionalValueModel() { }
 
         public int Id { get; set; }
         public int FoodId { get; set; }

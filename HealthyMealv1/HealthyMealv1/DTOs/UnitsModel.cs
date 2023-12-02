@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HealthyMealv1.DTOs
 {
-    public class UnitsDTO
+    public class UnitsModel
     {
-        public UnitsDTO() { }
+        public UnitsModel() { }
 
         public int Id { get; set; }
         public string Name { get; set; }

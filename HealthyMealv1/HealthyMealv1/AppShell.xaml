@@ -4,7 +4,8 @@
              x:Class="HealthyMealv1.AppShell"
              xmlns:views="clr-namespace:HealthyMealv1.Views"
              Shell.NavBarIsVisible="False"
-             Shell.TabBarIsVisible="False">
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled">
     <ShellContent Route="MainPage" ContentTemplate="{DataTemplate views:MainPage}"/>
     <ShellContent Route="MealsPage" ContentTemplate="{DataTemplate views:MealsPage}"/>
 </Shell>
