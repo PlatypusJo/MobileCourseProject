@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9LOQATSe1m2V7OeORw39da+F92beZ10UZ2rY9zFZPkY=",
+  "Source": "HealthyMealAPI",
+  "BasePath": "_content/HealthyMealAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
