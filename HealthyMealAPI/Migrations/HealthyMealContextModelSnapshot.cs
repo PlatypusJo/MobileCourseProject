@@ -31,9 +31,9 @@ namespace HealthyMealAPI.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(10000)
+                        .HasMaxLength(1000)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(max)");
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("RecipeId")
                         .IsRequired()
@@ -284,9 +284,9 @@ namespace HealthyMealAPI.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(10000)
+                        .HasMaxLength(1000)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(max)");
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("FoodId")
                         .IsRequired()
@@ -299,9 +299,9 @@ namespace HealthyMealAPI.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(1500)
+                        .HasMaxLength(500)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(1500)");
+                        .HasColumnType("varchar(500)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -367,13 +367,13 @@ namespace HealthyMealAPI.Migrations
                         .HasColumnType("varchar(450)");
 
                     b.Property<DateTime>("CookingTime")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(10000)
+                        .HasMaxLength(1000)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(max)");
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("FoodId")
                         .IsRequired()
@@ -386,9 +386,9 @@ namespace HealthyMealAPI.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(1500)
+                        .HasMaxLength(500)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(1500)");
+                        .HasColumnType("varchar(500)");
 
                     b.Property<string>("UserId")
                         .IsRequired()

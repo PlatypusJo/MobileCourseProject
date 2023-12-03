@@ -252,9 +252,9 @@ namespace HealthyMealAPI.Migrations
                     Id = table.Column<string>(type: "varchar(450)", unicode: false, maxLength: 450, nullable: false),
                     FoodId = table.Column<string>(type: "varchar(450)", unicode: false, maxLength: 450, nullable: false),
                     UserId = table.Column<string>(type: "varchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "varchar(1500)", unicode: false, maxLength: 1500, nullable: false),
+                    Name = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: false),
                     Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    Description = table.Column<string>(type: "varchar(max)", unicode: false, maxLength: 10000, nullable: false)
+                    Description = table.Column<string>(type: "varchar(1000)", unicode: false, maxLength: 1000, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -278,10 +278,10 @@ namespace HealthyMealAPI.Migrations
                     Id = table.Column<string>(type: "varchar(450)", unicode: false, maxLength: 450, nullable: false),
                     FoodId = table.Column<string>(type: "varchar(450)", unicode: false, maxLength: 450, nullable: false),
                     UserId = table.Column<string>(type: "varchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "varchar(1500)", unicode: false, maxLength: 1500, nullable: false),
+                    Name = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: false),
                     Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    CookingTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "varchar(max)", unicode: false, maxLength: 10000, nullable: false)
+                    CookingTime = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Description = table.Column<string>(type: "varchar(1000)", unicode: false, maxLength: 1000, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -368,7 +368,7 @@ namespace HealthyMealAPI.Migrations
                     Id = table.Column<string>(type: "varchar(450)", unicode: false, maxLength: 450, nullable: false),
                     RecipeId = table.Column<string>(type: "varchar(450)", unicode: false, maxLength: 450, nullable: false),
                     StepNumber = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "varchar(max)", unicode: false, maxLength: 10000, nullable: false)
+                    Description = table.Column<string>(type: "varchar(1000)", unicode: false, maxLength: 1000, nullable: false)
                 },
                 constraints: table =>
                 {

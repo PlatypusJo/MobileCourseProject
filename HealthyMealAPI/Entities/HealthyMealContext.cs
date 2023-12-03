@@ -61,11 +61,11 @@ namespace HealthyMealAPI.Entities
                     .IsUnicode(false);
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(1500)
+                    .HasMaxLength(500)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Description)
-                    .HasMaxLength(10000)
+                    .HasMaxLength(1000)
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Food).WithMany(p => p.Products)
@@ -92,12 +92,14 @@ namespace HealthyMealAPI.Entities
                     .IsUnicode(false);
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(1500)
+                    .HasMaxLength(500)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Description)
-                    .HasMaxLength(10000)
+                    .HasMaxLength(1000)
                     .IsUnicode(false);
+
+                entity.Property(e => e.CookingTime).HasColumnType("datetime");
 
                 entity.HasOne(d => d.Food).WithMany(p => p.Recipes)
                     .HasForeignKey(d => d.FoodId)
@@ -242,7 +244,7 @@ namespace HealthyMealAPI.Entities
                     .IsUnicode(false);
 
                 entity.Property(e => e.Description)
-                    .HasMaxLength(10000)
+                    .HasMaxLength(1000)
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Recipe).WithMany(p => p.CookingSteps)
