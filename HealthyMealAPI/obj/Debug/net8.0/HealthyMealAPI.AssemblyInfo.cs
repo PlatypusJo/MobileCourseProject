@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HealthyMealAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+599daf2e0ccc1d82e889e508587ec1990ff6b667")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+106adebf029abc42bfbd0ffed75e949afe2a7daa")]
 [assembly: System.Reflection.AssemblyProductAttribute("HealthyMealAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HealthyMealAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

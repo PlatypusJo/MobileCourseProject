@@ -11,7 +11,7 @@ namespace HealthyMealAPI.Controllers;
 [EnableCors]
 [Route("api/[controller]/[action]")]
 [ApiController]
-public class MenuController : Controller
+public class MenuStringController : Controller
 {
     private readonly HealthyMealContext _context;
 
@@ -19,107 +19,96 @@ public class MenuController : Controller
     /// Конструктор контроллера блюда, получающий в качестве параметра контекст БД
     /// </summary>
     /// <param name="context">Контекст БД</param>
-    public MenuController(HealthyMealContext context)
+    public MenuStringController(HealthyMealContext context)
     {
         _context = context;
     }
 
     /// <summary>
-    /// Получить все меню пользователя
+    /// Получить все строки меню.
     /// </summary>
-    /// <param name="userId"> ID пользователя. </param>
+    /// <param name="menuId"> ID меню. </param>
     /// <returns> Список меню пользователя. </returns>
     [HttpGet]
     [Authorize(Roles = "admin, user")]
-    public async Task<ActionResult<List<Menu>>> GetMenus(string userId)
+    public async Task<ActionResult<List<MenuString>>> GetMenuStrings(string menuId)
     {
-        List<Menu> menus = new List<Menu>();
-        await foreach (var menu in _context.Menus)
+        List<MenuString> menuStrings = new List<MenuString>();
+        await foreach (var menuStr in _context.MenuStrings)
         {
-            if (menu.UserId == userId)
+            if (menuStr.MenuId == menuId)
             {
-                menus.Add(menu);
+                menuStrings.Add(menuStr);
             }
         }
-        return menus;
+        return menuStrings;
     }
 
     /// <summary>
-    /// 
+    /// Получить конкретную строку меню.
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
     [HttpGet("{id}")]
     [Authorize(Roles = "admin, user")]
-    public async Task<ActionResult<Menu>> GetMenu(string id)
+    public async Task<ActionResult<MenuString>> GetMenuString(string id)
     {
-        var menu = await _context.Menus.FindAsync(id);
-        if (menu == null)
+        var menuStr = await _context.MenuStrings.FindAsync(id);
+        if (menuStr == null)
         {
             return NotFound();
         }
-        return Ok(menu);
+        return Ok(menuStr);
     }
 
     /// <summary>
-    /// 
+    /// Создать строку меню.
     /// </summary>
-    /// <param name="menu"></param>
-    /// <returns></returns>
+    /// <param name="menuStr"> Строка меню. </param>
+    /// <returns> Созданная строка меню. </returns>
     [HttpPost]
     [Authorize(Roles = "user")]
-    public async Task<ActionResult<Menu>> Post([FromBody] Menu menu)
+    public async Task<ActionResult<MenuString>> Post([FromBody] MenuString menuStr)
     {
-        menu.Id = Guid.NewGuid().ToString();
-        _context.Menus.Add(menu);
+        menuStr.Id = Guid.NewGuid().ToString();
+        _context.MenuStrings.Add(menuStr);
         await _context.SaveChangesAsync();
-        return CreatedAtAction("GetMenu", new { id = menu.Id }, menu);
+        return CreatedAtAction("GetMenuString", new { id = menuStr.Id }, menuStr);
     }
-   
+
     /// <summary>
-    /// 
+    /// Изменяет строку меню.
     /// </summary>
-    /// <param name="id"></param>
-    /// <param name="menu"></param>
-    /// <returns></returns>
+    /// <param name="menuStr"> Строка меню. </param>
+    /// <returns> Результат выполнения запроса. </returns>
     [HttpPut]
     [Authorize(Roles = "user")]
-    public async Task<ActionResult<Menu>> Put([FromBody] Menu menu)
+    public async Task<ActionResult<MenuString>> Put([FromBody] MenuString menuStr)
     {
-        var menu1 = await _context.Menus.FindAsync(menu.Id);
-        if (menu1 == null)
+        var menuStr1 = await _context.MenuStrings.FindAsync(menuStr.Id);
+        if (menuStr1 == null)
         {
             return NotFound();
         }
-        _context.Menus.Update(menu1);
+        _context.MenuStrings.Update(menuStr1);
         await _context.SaveChangesAsync();
         return Ok("Сущность изменена");
     }
     /// <summary>
-    /// Удаляет блюдо и связанные с ним сущности по id из БД
+    /// Удаляет строку меню
     /// </summary>
-    /// <param name="id">id удаляемого блюда</param>
+    /// <param name="id">id удаляемой строки меню</param>
     /// <returns>Статус выполнения запроса</returns>
-    // DELETE api/<DishController>/5
     [HttpDelete("{id}")]
     [Authorize(Roles = "user")]
     public async Task<IActionResult> Delete([FromRoute] string id)
     {
-        var menu = await _context.Menus.FindAsync(id);
-        if (menu == null)
+        var menuStr = await _context.MenuStrings.FindAsync(id);
+        if (menuStr == null)
         {
             return NotFound();
         }
-
-        await foreach(var menuStr in _context.MenuStrings)
-        {
-            if (menuStr.MenuId == menu.Id)
-            {
-                _context.MenuStrings.Remove(menuStr);
-            }
-        }
-
-        _context.Menus.Remove(menu);
+        _context.MenuStrings.Remove(menuStr);
         await _context.SaveChangesAsync();
         return Ok("Сущность успешно удалена");
     }
