@@ -6,7 +6,7 @@ namespace HealthyMealv1.Models
 {
     public class MealModel
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
         public double KcalAmount { get; set; }

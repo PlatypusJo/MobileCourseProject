@@ -6,9 +6,9 @@ namespace HealthyMealv1.Models
 {
     public class ProductToBuyModel
     {
-        public int Id { get; set; }
-        public int ProductId { get; set; }
-        public int UnitsId { get; set; }
+        public string Id { get; set; }
+        public string ProductId { get; set; }
+        public string UnitsId { get; set; }
         public string UnitsName { get; set; }
         public string Name { get; set; }
         public string Brand { get; set; }

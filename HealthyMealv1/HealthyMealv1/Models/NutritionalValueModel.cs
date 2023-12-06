@@ -8,9 +8,9 @@ namespace HealthyMealv1.Models
     {
         public NutritionalValueModel() { }
 
-        public int Id { get; set; }
-        public int FoodId { get; set; }
-        public int UnitsId { get; set; }
+        public string Id { get; set; }
+        public string FoodId { get; set; }
+        public string UnitsId { get; set; }
         public string UnitsName { get; set; }
         public double Kcal { get; set; }
         public double Proteins { get; set; }

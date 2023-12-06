@@ -6,12 +6,12 @@ namespace HealthyMealv1.Models
 {
     public class FoodModel
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
-        public int? UserId { get; set; }
-        public int NutritionalValueId { get; set; }
-        public int UnitsId { get; set; }
+        public string UserId { get; set; }
+        public string NutritionalValueId { get; set; }
+        public string UnitsId { get; set; }
         public string UnitsName { get; set; }
         public double Kcal { get; set; }
         public double Proteins { get; set; }

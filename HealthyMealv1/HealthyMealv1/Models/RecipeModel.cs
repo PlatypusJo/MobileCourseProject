@@ -7,11 +7,11 @@ namespace HealthyMealv1.Models
 {
     public class RecipeModel
     {
-        public int Id { get; set; }
-        public int FoodId { get; set; }
-        public int? UserId { get; set; }
+        public string Id { get; set; }
+        public string FoodId { get; set; }
+        public string UserId { get; set; }
         public string Name { get; set; }
-        public string Image { get; set; }
+        public byte[] Image { get; set; }
         public ObservableCollection<StepModel> StepsCooking { get; set; }
         public ObservableCollection<IngredientModel> Ingredients { get; set; }
     }

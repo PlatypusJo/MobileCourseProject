@@ -71,9 +71,9 @@ namespace HealthyMealv1.ViewModels
             {
                 _productsToBuy.Add(new ProductToBuyModel()
                 {
-                    Id = i,
-                    ProductId = i,
-                    UnitsId = i,
+                    Id = i.ToString(),
+                    ProductId = i.ToString(),
+                    UnitsId = i.ToString(),
                     UnitsName = "у.е.",
                     Name = "Test" + i.ToString(),
                     Amount = 100,
